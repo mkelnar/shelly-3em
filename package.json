@@ -1,0 +1,53 @@
+{
+  "name": "shelly-3em",
+  "version": "1.0.0",
+  "author": {
+    "email": "kelnar.michal@gmail.com",
+    "name": "Michal Kelnar"
+  },
+  "description": "Data fetcher and processor for Shelly3EM module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mkelnar/shelly-3em.git"
+  },
+  "engines": {
+    "node": ">=4.2.0"
+  },
+  "keywords": [
+    "shelly",
+    "3EM",
+    "power",
+    "meter",
+    "iot"
+  ],
+  "license": "BSD 3-Clause License",
+  "dependencies": {
+    "node-fetch": "^3.3.0",
+    "events": "^3.3.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.4",
+    "@types/node": "latest",
+    "@types/jest": "latest",
+    "jest": "latest",
+    "ts-jest": "latest",
+    "assert": "latest",
+    "@typescript-eslint/parser": "latest",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "eslint": "latest",
+    "eslint-plugin-mocha-no-only": "latest"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "lib/src/index.js",
+  "typings": "lib/src/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint": "npx eslint 'src/**' 'test/**'",
+    "test": "jest --no-cache --runInBand",
+    "test:cov": "jest --coverage --no-cache --runInBand",
+    "package": "npm run build && npm pack"
+  }
+}
